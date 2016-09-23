@@ -9,6 +9,7 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("com.sourcemuse.gradle.plugin:gradle-mongo-plugin:0.13.0")
 	}
 }
 
@@ -16,6 +17,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'spring-boot'
 apply plugin: 'war'
+apply plugin: 'mongo'
 
 
 war {
@@ -42,7 +44,12 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	runtime('com.h2database:h2')
+	runtime('com.sourcemuse.gradle.plugin:gradle-mongo-plugin:0.13.0')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.restdocs:spring-restdocs-mockmvc')
+}
+
+mongo{
+
 }
