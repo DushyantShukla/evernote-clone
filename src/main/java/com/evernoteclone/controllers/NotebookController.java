@@ -10,11 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.evernoteclone.entities.Notebook;
 import com.evernoteclone.services.NotebookService;
@@ -27,7 +28,7 @@ import com.evernoteclone.services.NotebookService;
  * @version $Revision$ $Date$
  * @since 0.1
  */
-@RestController
+@Controller
 @RequestMapping("/notebooks")
 public class NotebookController {
 
@@ -67,7 +68,7 @@ public class NotebookController {
 	 * @return ResponseEntity<String>
 	 */
 	@RequestMapping(headers = "Accept=application/json")
-	// @ResponseBody
+	@ResponseBody
 	public ResponseEntity<String> listJson() {
 
 		HttpHeaders headers = new HttpHeaders();
@@ -81,7 +82,7 @@ public class NotebookController {
 	 * @return ResponseEntity<String>
 	 */
 	@RequestMapping(value = "/{id}", headers = "Accept=application/json")
-	// @ResponseBody
+	@ResponseBody
 	public ResponseEntity<String> showJson(@PathVariable("id") String id) {
 
 		Notebook notebook = notebookService.findNotebook(id);
