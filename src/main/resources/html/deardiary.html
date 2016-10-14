@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Bootstrap 3 Fluid Layout Example</title>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/signup-signin-accordion.css"></link>
+    <link href="../css/innersection.css" th:href="@{/css/innersection.css}" rel="stylesheet"></link>
+    <link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'></link>
+    <link rel="stylesheet" type="text/css" href="../css/deardiary.css"></link>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <script>
+        document.body.className += ' fade-out';
+    </script>
+    <div id="content-wrapper">
+        <div class="container-fluid">
+            <div id="main-container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-sm-6 col-sm-offset-3" id="deardiary">
+                        <p>Dear Diary...</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-sm-6 col-sm-offset-3" id="forms">
+                        <div id="registration">
+                            <div id="registration-toggler">
+                                <p>get started</p>
+                            </div>
+                            <div id="box">
+                                <div class="cd-tabs">
+                                    <nav>
+                                        <ul class="cd-tabs-navigation">
+                                            <li><a href="#" data-content="login" class="selected">login</a></li>
+                                            <li><a href="#" data-content="signup">signup</a></li>
+                                            <li><a href="#" data-content="resetpassword">resetpin</a></li>
+                                        </ul>
+                                    </nav>
+                                    <ul class="cd-tabs-content">
+                                        <li data-content="login" class="selected">
+                                            <form>
+                                                <!--<fieldset>
+									<legend style="font-size: 15px; color: #4d4d4d; font-weight: bold;">login</legend>-->
+                                                <p>
+                                                    <input type="email" placeholder="e-mail" maxlength="512" width="100px" style="width: 100%;"></input>
+                                                </p>
+                                                <p>
+                                                    <input type="password" placeholder="password" maxlength="512" style="width: 100%;"></input>
+                                                </p>
+                                                <div id="signin-button">
+                                                    <a href="#workspace" class="page-forward"><button id="submit-button">sign in</button></a>
+                                                </div>
+                                                <!--	</fieldset> -->
+                                            </form>
+                                        </li>
+                                        <li data-content="signup">
+                                            <form>
+                                                <!-- <fieldset>
+	    				<legend style="font-size: 15px; color: #4d4d4d; font-weight: bold;">register</legend>-->
+                                                <p>
+                                                    <input type="text" placeholder="first name" maxlength="64" style="width: 49%;"></input>
+                                                    <input type="text" placeholder="last name" maxlength="64" style="width: 49%;"></input>
+                                                </p>
+
+                                                <p>
+                                                    <input type="email" placeholder="e-mail" maxlength="512" width="100px" style="width: 100%;"></input>
+                                                </p>
+
+                                                <p>
+                                                    <input type="password" placeholder="password" maxlength="512" style="width: 100%;"></input>
+                                                </p>
+
+                                                <div>
+                                                    <p>
+                                                        <a href="#workspace" class="page-forward"><button id="submit-button">sign up</button></a>
+                                                    </p>
+                                                </div>
+                                                <!-- </fieldset> -->
+                                            </form>
+                                        </li>
+                                        <li data-content="resetpassword">
+                                            <form>
+                                                <!-- <fieldset>
+	    				<legend style="font-size: 15px; color: #4d4d4d; font-weight: bold;">register</legend>-->
+                                                <p>
+                                                    <input type="email" placeholder="e-mail" maxlength="512" style="width: 100%;"></input>
+                                                </p>
+                                                <div>
+                                                    <p>
+                                                        <a href="#workspace" class="page-forward"><button id="submit-button">go</button>
+							</a>
+                                                    </p>
+                                                </div>
+                                                <!-- </fieldset> -->
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end cd-tabs -->
+
+                            </div>
+                            <!-- end box -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/scrolling.js" th:src="@{/js/scrolling.js}"></script>
+    <script type="text/javascript" src="../js/form-scroll.js" th:src="@{/js/form-scroll.js}"></script>
+    <script type="text/javascript" src="../js/toggle-on-hover.js" th:src="@{/js/toggle-on-hover.js}"></script>
+    <script type="text/javascript" src="../js/fading.js" th:src="@{/js/fading.js}"></script>
+</body>
+
+</html>

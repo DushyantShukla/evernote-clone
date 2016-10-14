@@ -1,10 +1,16 @@
 
 package com.evernoteclone;
 
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 
 import com.mongodb.MongoClient;
 
@@ -47,8 +53,8 @@ public class EvernotecloneApplication
 		// System.err.println("DB= " + db);
 		// }
 		// mongo.close();
-		// 
-		
+		//
+
 		//code to check if the database is available
 		try {
 			System.out.println("Database available!");
@@ -59,4 +65,5 @@ public class EvernotecloneApplication
 			mongo.close();
 		}
 	}
+
 }
